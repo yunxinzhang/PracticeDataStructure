@@ -1,0 +1,9 @@
+﻿  Map.hpp
+  main.cpp
+  Generating code
+  4 of 125 functions ( 3.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    3 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  map.vcxproj -> E:\cworkspace\alg\ListPractice\x64\Release\map.exe
+  map.vcxproj -> E:\cworkspace\alg\ListPractice\x64\Release\map.pdb (Full PDB)
