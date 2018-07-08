@@ -95,7 +95,7 @@ public:
 				return temp;
 			}
 			Node<T> * min= minNode(node->right);
-			min->right = delMinNode(node);
+			min->right = delMinNode(node->right);// 不要弄错，多做测试
 			min->left = node->left;
 			--size;
 			delete node;
