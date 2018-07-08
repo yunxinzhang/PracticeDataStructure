@@ -122,6 +122,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="avl.hpp" />
+    <ClInclude Include="bst.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="lex-chars.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <vector>
 using namespace std;
 
 template<typename T>
@@ -203,5 +204,33 @@ public:
 		t->left = delMinNode(t->left);
 		updateHeightAndBlance(t);
 		return rotate(t);
+	}
+	void getNodeValues(Node<T> *node, vector<T> & v) {
+		if (node == NULL)return;
+		if (node->left == NULL && node->right == NULL) {
+			v.push_back(node->data);
+		}
+		getNodeValues(node->left, v);
+		v.push_back(node->data);
+		getNodeValues(node->right, v);
+	}
+	bool reBalance(Node<T> *node) {
+		if (node == NULL)return true;
+		if(!reBalance(node->left))return false;
+		if(!reBalance(node->right))return false;
+		updateHeightAndBlance(node);
+		if (node->balanceFactor > 1 || node->balanceFactor < -1)return false;
+		return true;
+	}
+	bool isAVL() {
+		vector<T> v;
+		getNodeValues(root, v);
+		for (int i = 0; i < v.size() - 1; ++i) {
+			if (v[i] > v[i + 1]) {
+				cout << v[i] << "\t" << v[i + 1] << endl;
+				return false;
+			}
+		}
+		return reBalance(root);
 	}
 };

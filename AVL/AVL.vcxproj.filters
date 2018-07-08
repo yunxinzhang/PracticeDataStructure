@@ -23,5 +23,13 @@
     <ClInclude Include="avl.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="bst.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="lex-chars.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
