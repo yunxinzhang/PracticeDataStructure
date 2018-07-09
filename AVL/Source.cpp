@@ -4,8 +4,9 @@
 #include <string>
 #include <ctime>
 #include <random>
-#include "avl.hpp"
-//#include "bst.hpp"
+//#include "avl.hpp"
+#include "bst.hpp"
+//#include "../RedBlackTree/rbt.hpp"
 
 void test1() {
 	/*AVL<int> bst;
@@ -57,22 +58,24 @@ void read() {
 int main() {
 	read();
 	int NTIME = 10000;
-	clock_t t1, t2, t3;
+	clock_t t1, t2, t3, t4;
 	t1 = clock();
-	AVL<string> avl;
-	
-	for (int i = 0; i < dict.size(); ++i) {
-		avl.add(dict[i]);
-	}
-	srand(clock());
-	int ind = 0;
-	for (int i = 0; i < NTIME; ++i) {
-		ind = rand() % NTIME;
-		avl.hasVal(dict[ind]);
-	}
-	
+	//AVL<string> avl;
+	//
+	//for (int i = 0; i < dict.size(); ++i) {
+	//	avl.add(dict[i]);
+	//}
+	//srand(clock());
+	//int ind = 0;
+	//for (int i = 0; i < NTIME; ++i) {
+	//	ind = rand() % NTIME;
+	//	avl.hasVal(dict[ind]);
+	//}
+	////cout << avl.isAVL() << endl;
 	t2 = clock();
-	/*BinarySearchTree<string> bst;
+	
+
+	BinarySearchTree<string> bst;
 	for (int i = 0; i < dict.size(); ++i) {
 		bst.add(dict[i]);
 	}
@@ -81,10 +84,26 @@ int main() {
 	for (int i = 0; i < NTIME; ++i) {
 		ind = rand() % NTIME;
 		bst.hasVal(dict[ind]);
-	}*/
+	}
 	t3 = clock();
+
+
+	/*RedBlackTree<string> rbt;
+	for (int i = 0; i < dict.size(); ++i) {
+		rbt.add(dict[i]);
+	}
+	srand(clock());
+	int ind = 0;
+	for (int i = 0; i < NTIME; ++i) {
+		ind = rand() % NTIME;
+		rbt.hasVal(dict[ind]);
+		
+	}*/
+
+	t4 = clock();
 	cout << t2 - t1 << endl;
 	cout << t3 - t2 << endl;
-	cout << avl.isAVL() << endl;
+	cout << t4 - t3 << endl;
+
 	getchar();
 }
